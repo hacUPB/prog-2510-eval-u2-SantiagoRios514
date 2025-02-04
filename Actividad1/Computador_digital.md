@@ -1,5 +1,7 @@
 # Actividad 1: El computador digital moderno
 
+![alt text](images/4b601ced50579e329d3b39908fa0fdf6.jpg)
+
 ## ¿Qué es un computador?
 
 Un computador es una máquina programable que puede ejecutar una serie de comandos dados, con el fin de procesar los datos de entrada. A través de estos comandos, un computador puede ejecutar órdenes dadas por el usuario y a través de estas órdenes, el computador puede llegar a resultados que resuelvan muchas tareas distintas. 🖥️💻
@@ -25,6 +27,8 @@ El enfoque del procesador `RISC` es la optimización, este se usa principalmente
 ## ¿Qué es el hardware?
 
 El hardware son los componentes físicos que usa el usuario para interactuar con un computador. Estos son necesarios para hacer que el equipo funcione.
+
+![Hardware](images/hardware-computadora_80590-1785.avif)
 
 ### CPU: Unidad Central de Procesamiento
 
@@ -161,7 +165,7 @@ El teclado de un computador tiene un microcontrolador que tiene instalado un pro
 
 Para optimizar y facilitar los procesos con los datos para el computador, toda la información se codifica internamente en el sistema numérico **binario**, osea, mediante dos caracteres: `1` y `0`.
 
-Internamente, el `1` indica la presencia de corriente eléctrica y el `9` indica la ausencia de corriente eléctrica.
+Internamente, el `1` indica la presencia de corriente eléctrica y el `0` indica la ausencia de corriente eléctrica.
 
 [**Fuente**](https://www.oposinet.com/temario-de-informatica/temario-3-informatica/tema-10-representacin-interna-de-los-datos-2/)
 
