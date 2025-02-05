@@ -185,3 +185,8 @@ Así, para seguir aumentando la cantidad, se emplea el siguiente sistema:
 |Terabyte (TB)|1024 GB|
 
 [**Fuente**](https://edu.gcfglobal.org/es/cultura-tecnologica/medidas-de-almacenamiento-de-informacion/1/)
+
+
+## Mapa Conceptual Resumen
+
+![Mapa conceptual](images/Mapa%20Conceptual.png)
