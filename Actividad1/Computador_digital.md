@@ -189,4 +189,4 @@ Así, para seguir aumentando la cantidad, se emplea el siguiente sistema:
 
 ## Mapa Conceptual Resumen
 
-![Mapa conceptual](images/Mapa_Conceptual.png)
+![Mapa conceptual](images/Mapa_conceptual.png)
