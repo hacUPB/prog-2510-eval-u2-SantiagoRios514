@@ -186,7 +186,6 @@ Así, para seguir aumentando la cantidad, se emplea el siguiente sistema:
 
 [**Fuente**](https://edu.gcfglobal.org/es/cultura-tecnologica/medidas-de-almacenamiento-de-informacion/1/)
 
-
 ## Mapa Conceptual Resumen
 
 ![Mapa conceptual](images/Mapa_conceptual.png)

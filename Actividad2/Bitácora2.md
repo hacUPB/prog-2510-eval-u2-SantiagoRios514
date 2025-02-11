@@ -35,15 +35,23 @@ El trabajo de George Bool permitió usar fácilmente los valores binarios en com
 
 - $1010101010_2$
 
-  $2^{1}+2^{3}+2^{5}+2^{7}+2^{9}=512+128+32+8+2=682_{10}$
+  $2^{1}+2^{3}+2^{5}+2^{7}+2^{9}=2+8+32+128+512=682_{10}$
 
 - $11111_2$
 
-  $2^{0}+2^{1}+2^{2}+2^{3}+2^{4}+2^{5}=1+2+4+8+16+32=63_{10}$
+  $2^{0}+2^{1}+2^{2}+2^{3}+2^{4}=1+2+4+8+16=31_{10}$
 
 - $10000000_2$
+
+  $2^{7}=128_{10}$
+
 - $100100100_2$
+
+  $2^{2}+2^{5}+2^{8}=4+32+256=292_{10}$
+
 - $111000_2$
+
+  $2^{3}+2^{4}+2^{5}=8+16+32=56_{10}$
 
 ## 📤 Ejercicio 3 - Convertir a sistema `Binario` los siguientes valores decimales
 
@@ -53,7 +61,7 @@ El trabajo de George Bool permitió usar fácilmente los valores binarios en com
   |---|--|--|--|-|-|-|-|
   |0|1|1|1|1|1|1|1|
   
-  $127_{10}=1111111_2$
+  $127_{10}=111 1111_2$
 
 - $246_{10}$
 
@@ -61,15 +69,15 @@ El trabajo de George Bool permitió usar fácilmente los valores binarios en com
   |---|--|--|--|-|-|-|-|
   |1|1|1|1|0|1|1|0|
   
-  $246_{10}=11110110_{2}$
+  $246_{10}=1111 0110_{2}$
 
 - $1025_{10}$
 
-  |1024|256|128|64|32|16|8|4|2|1|
-  |----|---|---|--|--|--|-|-|-|-|
-  |1|0|0|0|0|0|0|0|0|1|
+  |1024|512|256|128|64|32|16|8|4|2|1|
+  |----|---|---|---|--|--|--|-|-|-|-|
+  |1|0|0|0|0|0|0|0|0|0|1|
 
-  $1025_{10}=1000000001_{2}$
+  $1025_{10}=100 0000 0001_{2}$
 
 - $354_{10}$
 
@@ -77,7 +85,7 @@ El trabajo de George Bool permitió usar fácilmente los valores binarios en com
   |---|---|--|--|--|-|-|-|-|
   |1|0|1|1|0|0|0|1|0|
 
-  $354_{10}=101100010_{2}$
+  $354_{10}=1 0110 0010_{2}$
 
 - $187_{10}$
 
@@ -85,6 +93,7 @@ El trabajo de George Bool permitió usar fácilmente los valores binarios en com
   |---|--|--|--|-|-|-|-|
   |1|0|1|1|1|0|1|1|
 
+  $187_{10}=1011 1011_{2}$
 
 ## Tipos de Datos
 
@@ -92,11 +101,14 @@ El trabajo de George Bool permitió usar fácilmente los valores binarios en com
 
 ||Enteros|Punto Flotante|String|Booleano|Char|
 |-|------|--------------|------|--------|----|
-|Python|SI|
-|C y C++|SI|
-|Java|SI|
-|JavaScript|SI|
-|C#|SI|
-|Swift|SI|
-|Ruby|SI|
-|PHP|SI|
+|Características Principales|Son números sin parte decimal|Representa números reales con parte decimal|Representa secuencias de caracteres o texto en programación|Almacena uno de dos valores: `true` o `false`|Representa un sólo carácter alfanumérico|
+|C y C++|`int`, `short`|`float`, `double`|`char[]`|`bool`|`char`|
+|Java|`int`, `long`|`float`, `double`|`String`|`boolean`|`char`|
+|Python|`int`|`float`|`str`|`bool`|NO|
+|JavaScript|NO|`Number`|`String`|`boolean`|NO|
+|C#|`int`, `short`, `long`|`float`, `double`|`string`|`bool`|`char`|
+|Swift|`Int`, `UInt`|`Float`, `Double`|`String`||`Character`|
+|Ruby|`Integer`|`Float`|`String`|`true`, `false`|`char`|
+|PHP|`int`|`float`, `double`|`string`|`bool`|`char`|
+
+[**Fuente**](https://www.apinem.com/tipos-de-datos-programacion)
