@@ -101,3 +101,120 @@ Si no
 Fin si
 Escribir precio, total
 ```
+
+## Bucles
+
+### Ejemplo 1:
+
+```py
+suma = 0
+cont = 1 
+while cont <= 10:
+    valor = int(input("Ingrese el valor: "))
+    suma = suma + valor
+    cont = cont + 1
+print(f"La suma es: {suma}")
+```
+
+### Ejemplo 2:
+
+```py
+suma = 0
+for cont in range(1,11,1):
+    valor = int(input("Ingrese el valor: "))
+    suma = suma + valor
+print(f"La suma es: {suma}")
+```
+
+### Un profesor tiene un salario inicial de $1500, y recibe un incremento de 10% anual durante 6 años. ¿Cuál es su salario al cabo de 6 años? ¿Qué salario ha recibido en cada uno de los 6 años?
+
+#### Análisis
+
+**1. Variables de entrada** No hay
+
+**2. Variables de salida**
+
+- `salario` : El salario del profesor en cada año.
+
+**3. Constantes**
+
+- `salario_inicial` = 1500
+- `incremento` = 0.1
+- `años` = 6
+
+**4. Otras variables**
+
+- `c` : El contador en la función `for`
+
+**5. Ecuaciones**
+
+- $\textnormal{salario} = \textnormal{salario} + (\textnormal{salario} \cdot \textnormal{incremento})$
+
+#### Pseudocódigo
+
+```
+Inicio
+salario_inicial = 1500
+incremento = 0.1
+años = 6
+Desde c = 0 hasta c = años
+    salario = salario_inicial
+    Escribir "El salario el año", c, "Es de ", salario
+    salario = salario * incremento
+Fin desde
+Fin
+```
+
+#### Código en Python
+
+```py
+salario_inicial = 1500
+incremento = 0.1
+años = 6
+salario = salario_inicial + (salario_inicial * incremento) 
+for c in range (1,años,1):
+    print(f"El salario el año {c} es de {salario}")
+    salario = salario + (salario * incremento)
+print(f"El salario al cabo de los 6 años es {salario}")
+```
+
+### “El náufrago satisfecho” ofrece hamburguesas sencillas (S), dobles (D) y triples (T), las cuales tienen un costo de $20, $25 y $28 respectivamente La empresa acepta tarjetas de crédito con un cargo de 5 % sobre la compra. Suponiendo que los clientes adquieren N hamburguesas, las cuales pueden ser de diferente tipo, realice un algoritmo para determinar cuánto deben pagar.
+
+#### Análisis
+
+**1. Variables de entrada**
+
+- `S` : Número de hamburguesas sencillas
+- `D` : Número de hamburguesas dobles
+- `T` : Número de hamburguesas triples
+
+**2. Variables de salida**
+
+- `precio_total`
+
+**3. Constantes**
+
+- `precio_S` = 20
+- `precio_D` = 25
+- `precio_T` = 28
+- `cargo` = 0.05
+
+**4. Otras variables**
+
+- `N`
+- `c` : El contador en la función `for`
+
+**5. Ecuaciones**
+
+- 
+
+#### Pseudocódigo
+
+```
+Leer S
+Leer D
+Leer T
+N = S + D + T
+Desde c = 0 hasta N
+    
+```
