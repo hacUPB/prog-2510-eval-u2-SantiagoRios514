@@ -299,3 +299,63 @@ Las estructuras de control sirven para organizar los algoritmos según la necesi
 Por ejemplo, en mi vida yo puedo utilizar una estructura de control cuando reviso la hora a la que debo dormir según el horario del siguiente día, si la primera clase es a las 6:00, entonces debo dormirme antes de las 10:00. De lo contrario, puedo quedarme despierto hasta alrededor de las 11:30
 
 Otro ejemplo que involucra cálculos matemáticos al tomar la decisión puede ser un algoritmo que clasifique números según si son pares o impares, en este caso, si el residuo de un número al dividirlo entre 2 es 0, quiere decir que es par, de lo contrario, es impar.
+
+## Ejercicios extra
+
+### Solicitar al usuario 2 números enteros. Imprimir en pantalla los números pares comprendidos entre ellos.
+
+```
+Inicio
+Leer N1
+Leer N2
+Si N1 > N2
+    temp = N2
+    N2 = N1
+    N1 = temp
+Fin Si
+Si Residuo(N1,2) = 1
+    N1 = N1 + 1
+Fin Si
+Mientras N1 <= N2
+    Imprimir N1
+    N1 = N1 + 2
+Fin Mientras
+Fin
+```
+
+```py
+N1 = int(input("Ingrese el primer número: "))
+N2 = int(input("Ingrese el segundo número: "))
+if N1 > N2:
+    temp = N2
+    N2 = N1
+    N1 = temp
+if (N1 % 2) == 1:
+    N1 = N1 + 1
+while N1 <= N2:
+    print(N1)
+    N1 = N1 + 2
+```
+
+### Serie de Fibonacci
+
+```
+Inicio
+Leer num_total
+N1 = 0
+N2 = 1
+N3 = 1
+Imprimir N1
+Imprimir N2
+Si num_total > 0
+    Desde c = 0 hasta c = num_total
+        Imprimir N3
+        N1 = N2
+        N2 = N3
+        N3 = N1 + N2
+    Fin Desde
+Si no
+    Imprimir "Valor no válido"
+Fin si
+Fin
+```
