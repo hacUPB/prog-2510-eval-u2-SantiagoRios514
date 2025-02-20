@@ -348,7 +348,7 @@ N3 = 1
 Imprimir N1
 Imprimir N2
 Si num_total > 0
-    Desde c = 0 hasta c = num_total
+    Desde c = 2 hasta c = num_total
         Imprimir N3
         N1 = N2
         N2 = N3
