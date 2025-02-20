@@ -359,3 +359,20 @@ Si no
 Fin si
 Fin
 ```
+
+```py
+num_total = int(input("Ingrese cuántos números de fibonacci desea imprimir: "))
+N1 = 0
+N2 = 1 
+N3 = 1 
+print(N1)
+print(N2)
+if num_total > 0:
+    for i in range (2,num_total,1):
+        print(N3)
+        N1 = N2
+        N2 = N3
+        N3 = N1 + N2
+else:
+    print("Valor no válido")
+```
