@@ -248,6 +248,7 @@ Si pago_con_tarjeta = 1
 Fin Si
 
 Escribir "El total a pagar es de: $", total
+Fin
 ```
 
 ## Actividad final
