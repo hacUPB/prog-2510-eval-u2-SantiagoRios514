@@ -111,7 +111,7 @@ Fin
 
 ![Diagrama 3](images/Reto3.png)
 
-## Se requiere determinar la edad actual de una persona basándose en su fecha de nacimiento. Además, es necesario establecer si la persona ya ha cumplido años en el año en curso, si aún no lo ha hecho, o si hoy es su cumpleaños, para celebrarlo. La fecha de nacimiento y la fecha actual estarán representadas mediante tres variables: día, mes y año.
+## Se requiere determinar la edad actual de una persona basándose en su fecha de nacimiento. Además, es necesario establecer si la persona ya ha cumplido años en el año en curso, si aún no lo ha hecho, o si hoy es su cumpleaños, para celebrarlo. La fecha de nacimiento y la fecha actual estarán representadas mediante tres variables: día, mes y año
 
 - Diseñe un algoritmo que permita calcular la edad de la persona.
 
@@ -175,3 +175,53 @@ Fin
 ### Diagrama de flujo
 
 ![alt text](images/Reto4.png)
+
+## Realice un algoritmo que permita determinar el sueldo semanal de un trabajador con base en las horas trabajadas y el pago por hora, considerando que a partir de la hora número 41 y hasta la 45, cada hora se le paga el doble, de la hora 46 a la 50, el triple, y que trabajar más de 50 horas no está permitido. Represente el algoritmo mediante pseudocódigo
+
+### Análisis
+
+1. Variables de entrada
+
+    - `horas` : Horas trabajadas esa semana
+    - `sueldoH` : Pago por hora
+
+2. Variables de salida
+
+    - `sueldoS` : Sueldo semanal
+
+3. Constantes no hay
+
+4. Otras variables
+
+    - 
+
+5. Ecuaciones
+
+    - 
+
+### Pseudocódigo
+
+```
+Inicio
+Leer horas, sueldoH
+horas_normal = 0
+horas_doble = 0
+horas_triple = 0
+Si 47 >= horas >= 50
+    horas_normal = 45
+    horas_doble = 5
+    horas_triple = horas - 45
+Si no si 41 >= horas >= 45
+    horas_normal = 45
+    horas_doble = horas - 40
+Si no si horas <= 40
+    horas_normal = horas
+Si no
+    Imprimir "Número de horas inválido"
+sueldoS = (horas_normal * sueldoH) + (horas_doble * sueldoH * 2) + (horas_triple * sueldoH * 3)
+Si horas <= 50
+    Imprimir sueldoS
+Fin
+```
+
+### Diagrama de flujo
