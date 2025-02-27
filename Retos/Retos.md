@@ -191,13 +191,13 @@ Fin
 
 3. Constantes no hay
 
-4. Otras variables
-
-    - 
+4. Otras variables no hay
 
 5. Ecuaciones
 
-    - 
+    - horas_triple = horas - 45
+    - horas_doble = horas - 40
+    - sueldoS = (horas_normal * sueldoH) + (horas_doble * sueldoH * 2) + (horas_triple * sueldoH * 3)
 
 ### Pseudocódigo
 
@@ -207,11 +207,11 @@ Leer horas, sueldoH
 horas_normal = 0
 horas_doble = 0
 horas_triple = 0
-Si 47 >= horas >= 50
+Si 47 <= horas <= 50
     horas_normal = 45
     horas_doble = 5
     horas_triple = horas - 45
-Si no si 41 >= horas >= 45
+Si no si 41 <= horas <= 45
     horas_normal = 45
     horas_doble = horas - 40
 Si no si horas <= 40
@@ -224,4 +224,216 @@ Si horas <= 50
 Fin
 ```
 
-### Diagrama de flujo
+## Se requiere un algoritmo para determinar, de N cantidades, cuántas son cero, cuántas son menores a cero, y cuántas son mayores a cero. Realice el pseudocódigo para representarlo, utilizando el ciclo apropiado.
+
+### Análisis
+
+1. Variables de entrada
+
+    - `nCantidades` : El número de cantidades que el usuario quiere definir.
+
+2. Variables de salida no hay
+
+3. Constantes no hay
+
+4. Otras variables
+
+    - `c` : El contador de números.
+
+5. Ecuaciones no hay
+
+### Pseudocódigo
+
+```
+Inicio
+Leer nCantidades
+Desde c = 1 hasta c = nCantidades
+    Leer numero
+    Si numero > 0
+        Imprimir "El número ", c, "es mayor a cero"
+    Si no si numero < 0
+        Imprimir "El número ", c, "es menor a cero"
+    Si no
+        Imprimir "El número ", c, "es cero"
+    Fin si
+Fin Desde
+Fin
+```
+
+## Se requiere un algoritmo para determinar cuánto ahorrará en pesos una persona diariamente, y en un año, si ahorra 3¢ el primero de enero, 9¢ el dos de enero, 27¢ el 3 de enero y así sucesivamente todo el año. Represente la solución mediante pseudocódigo.
+
+### Análisis
+
+1. Variables de entrada no hay
+
+2. Variables de salida
+
+    - `ahorro_p` : Da los valores de ahorro en pesos
+
+3. Constantes no hay
+
+4. Otras variables
+
+    - `c` : El contador de números.
+    - `ahorro` : Acumula el ahorro cada día.
+    - `ahorro_diario` : Da el ahorro que se sumó cada día.
+    - `ahorro_dp` : Da el ahorro sumado cada día en pesos.
+    - `ahorro_p` : Da el ahorro acumulado en pesos.
+
+5. Ecuaciones
+
+    - `ahorro_dp = ahorro_diario / 100`
+    - `ahorro_diario = 3^(c+1)`
+    - `ahorro = ahorro + ahorro_diario`
+    - `ahorro_p = ahorro / 100`
+
+### Pseudocódigo
+
+```
+Inicio
+ahorro = 3
+ahorro_diario = ahorro
+Desde c = 1 hasta c = 364
+    ahorro_dp = ahorro_diario / 100
+    Imprimir "El ahorro el día ", c, "fue de $", ahorro_dp
+    ahorro_diario = 3^(c+1)
+    ahorro = ahorro + ahorro_diario
+Fin Desde
+ahorro_p = ahorro / 100
+Imprimir "Al final del año, el usuario ahorrará", ahorro_p
+Fin
+```
+
+## Realice el algoritmo para determinar cuánto pagará una persona que adquiere N artículos, los cuales están de promoción. Considere que si su precio es mayor o igual a $200 se le aplica un descuento de 15%, y si su precio es mayor a $100, pero menor a $200, el descuento es de 12%; de lo contrario, solo se le aplica 10%. Se debe saber cuál es el costo y el descuento que tendrá cada uno de los artículos y finalmente cuánto se pagará por todos los artículos obtenidos. Represente la solución mediante pseudocódigo.
+
+### Análisis
+
+1. Variables de entrada
+
+    - `nArticulos` : Número de artículos a comprar
+    - `cArticulo` : Costo de cada artículo a comprar
+
+2. Variables de salida
+
+    - `total` : Precio final de la compra
+
+3. Constantes no hay
+
+4. Otras variables
+
+    - `c` : El contador de números.
+
+5. Ecuaciones
+
+    - `total = total + (cArticulo * descuento)`
+
+
+### Pseudocódigo
+
+```
+Inicio
+total = 0
+Leer nArticulos
+Desde c = 1 hasta c = nArticulos
+    Leer cArticulo
+    Si cArticulo >= 200
+        descuento = 0.85
+    Si no si 100 < cArticulo < 200
+        descuento = 0.88
+    Si no
+        descuento = 0.90
+    Fin si
+    total = total + (cArticulo * descuento)
+Fin Desde
+Imprimir total
+Fin
+```
+
+## Realice un algoritmo y represéntelo mediante pseudocódigo para obtener una función exponencial, la cual está dada por: $e^{x}=1+\frac{x}{1!}+\frac{x^{2}}{2!}+\frac{x^{3}}{3!}+\dots$
+
+### Análisis
+
+1. Variables de entrada
+
+    - `x` : El número al que se quiere elevar la función exponencial.
+    - `nIteraciones` : Es el número de iteraciones con el que usuario quiere que se aproxime el resultado.
+
+2. Variables de salida
+
+    - `eX` : Es el resultado de la aproximación de la operación.
+
+3. Constantes no hay
+
+4. Otras variables
+
+    - `n` : El contador de números.
+    - `e_n` : Es el resultado de cada iteración del bucle.
+
+5. Ecuaciones
+
+    - `e_n = (x^n)/(n!)`
+    - `eX = eX + e_n`
+
+### Pseudocódigo
+
+```
+Inicio
+Leer x
+Leer nIteraciones
+eX = 0
+Desde n = 0 hasta n = (nIteraciones - 1)
+    e_n = (x^n)/(n!)
+    eX = eX + e_n
+Fin Desde
+Imprimir eX
+Fin
+```
+
+## Realice un algoritmo para obtener el seno de un ángulo y represéntelo mediante pseudocódigo. Utilice la siguiente ecuación: $\sin{x}=x-\frac{x^{3}}{3!}+\frac{x^{5}}{5!}-\frac{x^{7}}{7!}+\dots$
+
+### Análisis
+
+1. Variables de entrada
+
+    - `x` : El número al que se quiere sacar el seno.
+    - `nIteraciones` : Es el número de iteraciones con el que usuario quiere que se aproxime el resultado.
+
+2. Variables de salida
+
+    - `sin_x` : Es el resultado de la aproximación de la operación.
+
+3. Constantes no hay
+
+4. Otras variables
+
+    - `n` : El contador para el bucle desde.
+    - `c` : El contador para la operación.
+    - `sin_n` : Es el resultado de cada iteración del bucle.
+
+5. Ecuaciones
+
+    - `sin_n = (x^c)/(c!)`
+    - `sin_x = sin_x - sin_n`
+    - `sin_x = sin_x + sin_n`
+    - `c = c + 2`
+
+### Pseudocódigo
+
+```
+Inicio
+Leer x
+Leer nIteraciones
+sin_x = 0
+c = 1
+Desde n = 1 hasta n = nIteraciones
+    sin_n = (x^c)/(c!)
+    Si Residuo(n,2) = 0
+        sin_x = sin_x - sin_n
+    Si no
+        sin_x = sin_x + sin_n
+    Fin si
+    c = c + 2
+Fin desde
+Imprimir sin_x
+Fin
+```
