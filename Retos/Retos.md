@@ -232,7 +232,11 @@ Fin
 
     - `nCantidades` : El número de cantidades que el usuario quiere definir.
 
-2. Variables de salida no hay
+2. Variables de salida
+
+    - `mayor` : Contador de números mayores que cero.
+    - `menor` : Contador de números menores que cero.
+    - `cero` : Contador de números iguales a cero.
 
 3. Constantes no hay
 
@@ -240,23 +244,31 @@ Fin
 
     - `c` : El contador de números.
 
-5. Ecuaciones no hay
+5. Ecuaciones
+
+    - `mayor = mayor + 1`
+    - `menor = menor + 1`
+    - `cero = cero + 1`
 
 ### Pseudocódigo
 
 ```
 Inicio
 Leer nCantidades
+mayor = 0
+menor = 0
+cero = 0
 Desde c = 1 hasta c = nCantidades
     Leer numero
     Si numero > 0
-        Imprimir "El número ", c, "es mayor a cero"
+        mayor = mayor + 1
     Si no si numero < 0
-        Imprimir "El número ", c, "es menor a cero"
+        menor = menor + 1
     Si no
-        Imprimir "El número ", c, "es cero"
+        cero = cero + 1
     Fin si
 Fin Desde
+Imprimir "Hay ", menor, "números menores que cero, " mayor, "números mayores que cero y " cero, "números iguales a cero"
 Fin
 ```
 
