@@ -303,9 +303,9 @@ Otro ejemplo que involucra cálculos matemáticos al tomar la decisión puede se
 
 ## Ejercicios extra
 
-### Solicitar al usuario 2 números enteros. Imprimir en pantalla los números pares comprendidos entre ellos.
+### Solicitar al usuario 2 números enteros. Imprimir en pantalla los números pares comprendidos entre ellos
 
-```
+```pseudo
 Inicio
 Leer N1
 Leer N2
@@ -340,7 +340,7 @@ while N1 <= N2:
 
 ### Serie de Fibonacci
 
-```
+```pseudo
 Inicio
 Leer num_total
 N1 = 0

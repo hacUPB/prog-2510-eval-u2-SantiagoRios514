@@ -1,6 +1,6 @@
 # Problemas
 
-## Se requiere obtener la distancia entre dos puntos en el plano cartesiano, tal y como se muestra en la figura 1. Realice un diagrama de flujo y pseudocódigo que representen el algoritmo para obtener la distancia entre esos puntos.
+## 1. Se requiere obtener la distancia entre dos puntos en el plano cartesiano, tal y como se muestra en la figura 1. Realice un diagrama de flujo y pseudocódigo que representen el algoritmo para obtener la distancia entre esos puntos
 
 ![Figura 1](<images/Figura1.webp>)
 
@@ -27,7 +27,7 @@
 
 ### Pseudocódigo
 
-```
+```pseudo
 Inicio
 Leer x_1, x_2, y_1, y_2
 D = sqrt((x_2 - x_1)^2+(y_2 - y_1)^2)
@@ -39,7 +39,7 @@ Fin
 
 ![Diagrama 1](images/Reto1.png)
 
-## Una modista, para realizar sus prendas de vestir, encarga las telas al extranjero. Para cada pedido, tiene que proporcionar las medidas de la tela en pulgadas, pero ella generalmente las tiene en metros. Realice un algoritmo para ayudar a resolver el problema, determinando cuántas pulgadas debe pedir con base en los metros que requiere. Represéntelo mediante un diagrama de flujo y pseudocódigo (1 pulgada = 0.0254 m).
+## 2. Una modista, para realizar sus prendas de vestir, encarga las telas al extranjero. Para cada pedido, tiene que proporcionar las medidas de la tela en pulgadas, pero ella generalmente las tiene en metros. Realice un algoritmo para ayudar a resolver el problema, determinando cuántas pulgadas debe pedir con base en los metros que requiere. Represéntelo mediante un diagrama de flujo y pseudocódigo (1 pulgada = 0.0254 m)
 
 ### Análisis
 
@@ -59,15 +59,15 @@ Fin
 
 5. Ecuaciones
 
-    - `medida_in = medida * m_in`
+    - `medida_in = medida / m_in`
 
 ### Pseudocódigo
 
-```
+```pseudo
 Inicio
-Leer medida 
 m_in = 0.0254
-medida_in = medida * m_in
+Leer medida
+medida_in = medida / m_in
 Imprimir medida_in
 Fin
 ```
@@ -76,7 +76,7 @@ Fin
 
 ![Diagrama 2](images/Reto2.png)
 
-## Se requiere determinar la hipotenusa de un triángulo rectángulo. ¿Cómo sería el diagrama de flujo y el pseudocódigo que representen el algoritmo para obtenerla?
+## 3. Se requiere determinar la hipotenusa de un triángulo rectángulo. ¿Cómo sería el diagrama de flujo y el pseudocódigo que representen el algoritmo para obtenerla?
 
 ### Análisis
 
@@ -99,7 +99,7 @@ Fin
 
 ### Pseudocódigo
 
-```
+```pseudo
 Inicio
 Leer c1, c2
 h = sqrt((c1)^2+(c2)^2)
@@ -111,7 +111,7 @@ Fin
 
 ![Diagrama 3](images/Reto3.png)
 
-## Se requiere determinar la edad actual de una persona basándose en su fecha de nacimiento. Además, es necesario establecer si la persona ya ha cumplido años en el año en curso, si aún no lo ha hecho, o si hoy es su cumpleaños, para celebrarlo. La fecha de nacimiento y la fecha actual estarán representadas mediante tres variables: día, mes y año
+## 4. Se requiere determinar la edad actual de una persona basándose en su fecha de nacimiento. Además, es necesario establecer si la persona ya ha cumplido años en el año en curso, si aún no lo ha hecho, o si hoy es su cumpleaños, para celebrarlo. La fecha de nacimiento y la fecha actual estarán representadas mediante tres variables: día, mes y año
 
 - Diseñe un algoritmo que permita calcular la edad de la persona.
 
@@ -147,7 +147,7 @@ Fin
 
 ### Pseudocódigo
 
-```
+```pseudo
 Inicio
 Leer dia_h, mes_h, ano_h, dia_c, mes_c, ano_c
 celebro = 0
@@ -167,7 +167,7 @@ Si no
 Fin si
 Imprimir edad
 Si celebro = 1
-    Imprimir "El usuario ya celebró su cumpleaños este año"
+    Imprimir "El usuario ya cumplió años este año"
 Fin si
 Fin
 ```
@@ -176,7 +176,7 @@ Fin
 
 ![alt text](images/Reto4.png)
 
-## Realice un algoritmo que permita determinar el sueldo semanal de un trabajador con base en las horas trabajadas y el pago por hora, considerando que a partir de la hora número 41 y hasta la 45, cada hora se le paga el doble, de la hora 46 a la 50, el triple, y que trabajar más de 50 horas no está permitido. Represente el algoritmo mediante pseudocódigo
+## 5. Realice un algoritmo que permita determinar el sueldo semanal de un trabajador con base en las horas trabajadas y el pago por hora, considerando que a partir de la hora número 41 y hasta la 45, cada hora se le paga el doble, de la hora 46 a la 50, el triple, y que trabajar más de 50 horas no está permitido. Represente el algoritmo mediante pseudocódigo
 
 ### Análisis
 
@@ -195,18 +195,18 @@ Fin
 
 5. Ecuaciones
 
-    - horas_triple = horas - 45
-    - horas_doble = horas - 40
-    - sueldoS = (horas_normal * sueldoH) + (horas_doble * sueldoH * 2) + (horas_triple * sueldoH * 3)
+    - `horas_triple = horas - 45`
+    - `horas_doble = horas - 40`
+    - `sueldoS = (horas_normal * sueldoH) + (horas_doble * sueldoH * 2) + (horas_triple * sueldoH * 3)`
 
 ### Pseudocódigo
 
-```
+```pseudo
 Inicio
-Leer horas, sueldoH
 horas_normal = 0
 horas_doble = 0
 horas_triple = 0
+Leer horas, sueldoH
 Si 47 <= horas <= 50
     horas_normal = 45
     horas_doble = 5
@@ -224,7 +224,7 @@ Si horas <= 50
 Fin
 ```
 
-## Se requiere un algoritmo para determinar, de N cantidades, cuántas son cero, cuántas son menores a cero, y cuántas son mayores a cero. Realice el pseudocódigo para representarlo, utilizando el ciclo apropiado.
+## 6. Se requiere un algoritmo para determinar, de N cantidades, cuántas son cero, cuántas son menores a cero, y cuántas son mayores a cero. Realice el pseudocódigo para representarlo, utilizando el ciclo apropiado
 
 ### Análisis
 
@@ -252,7 +252,7 @@ Fin
 
 ### Pseudocódigo
 
-```
+```pseudo
 Inicio
 Leer nCantidades
 mayor = 0
@@ -272,7 +272,7 @@ Imprimir "Hay ", menor, "números menores que cero, " mayor, "números mayores q
 Fin
 ```
 
-## Se requiere un algoritmo para determinar cuánto ahorrará en pesos una persona diariamente, y en un año, si ahorra 3¢ el primero de enero, 9¢ el dos de enero, 27¢ el 3 de enero y así sucesivamente todo el año. Represente la solución mediante pseudocódigo.
+## 7. Se requiere un algoritmo para determinar cuánto ahorrará en pesos una persona diariamente, y en un año, si ahorra 3¢ el primero de enero, 9¢ el dos de enero, 27¢ el 3 de enero y así sucesivamente todo el año. Represente la solución mediante pseudocódigo
 
 ### Análisis
 
@@ -301,7 +301,7 @@ Fin
 
 ### Pseudocódigo
 
-```
+```pseudo
 Inicio
 ahorro = 3
 ahorro_diario = ahorro
@@ -316,7 +316,7 @@ Imprimir "Al final del año, el usuario ahorrará", ahorro_p
 Fin
 ```
 
-## Realice el algoritmo para determinar cuánto pagará una persona que adquiere N artículos, los cuales están de promoción. Considere que si su precio es mayor o igual a $200 se le aplica un descuento de 15%, y si su precio es mayor a $100, pero menor a $200, el descuento es de 12%; de lo contrario, solo se le aplica 10%. Se debe saber cuál es el costo y el descuento que tendrá cada uno de los artículos y finalmente cuánto se pagará por todos los artículos obtenidos. Represente la solución mediante pseudocódigo.
+## 8. Realice el algoritmo para determinar cuánto pagará una persona que adquiere N artículos, los cuales están de promoción. Considere que si su precio es mayor o igual a $200 se le aplica un descuento de 15%, y si su precio es mayor a $100, pero menor a $200, el descuento es de 12%; de lo contrario, solo se le aplica 10%. Se debe saber cuál es el costo y el descuento que tendrá cada uno de los artículos y finalmente cuánto se pagará por todos los artículos obtenidos. Represente la solución mediante pseudocódigo
 
 ### Análisis
 
@@ -339,10 +339,9 @@ Fin
 
     - `total = total + (cArticulo * descuento)`
 
-
 ### Pseudocódigo
 
-```
+```pseudo
 Inicio
 total = 0
 Leer nArticulos
@@ -361,7 +360,7 @@ Imprimir total
 Fin
 ```
 
-## Realice un algoritmo y represéntelo mediante pseudocódigo para obtener una función exponencial, la cual está dada por: $e^{x}=1+\frac{x}{1!}+\frac{x^{2}}{2!}+\frac{x^{3}}{3!}+\dots$
+## 9. Realice un algoritmo y represéntelo mediante pseudocódigo para obtener una función exponencial, la cual está dada por: $e^{x}=1+\frac{x}{1!}+\frac{x^{2}}{2!}+\frac{x^{3}}{3!}+\dots$
 
 ### Análisis
 
@@ -388,7 +387,7 @@ Fin
 
 ### Pseudocódigo
 
-```
+```pseudo
 Inicio
 Leer x
 Leer nIteraciones
@@ -401,7 +400,7 @@ Imprimir eX
 Fin
 ```
 
-## Realice un algoritmo para obtener el seno de un ángulo y represéntelo mediante pseudocódigo. Utilice la siguiente ecuación: $\sin{x}=x-\frac{x^{3}}{3!}+\frac{x^{5}}{5!}-\frac{x^{7}}{7!}+\dots$
+## 10. Realice un algoritmo para obtener el seno de un ángulo y represéntelo mediante pseudocódigo. Utilice la siguiente ecuación: $\sin{x}=x-\frac{x^{3}}{3!}+\frac{x^{5}}{5!}-\frac{x^{7}}{7!}+\dots$
 
 ### Análisis
 
@@ -431,7 +430,7 @@ Fin
 
 ### Pseudocódigo
 
-```
+```pseudo
 Inicio
 Leer x
 Leer nIteraciones
